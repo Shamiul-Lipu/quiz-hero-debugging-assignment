@@ -187,5 +187,11 @@ document.querySelector("#submit").addEventListener("click", function () {
     clearTimeout(x);
   }, 1500);
   window.scrollTo(0, 0);
-  console.log(storage);
+  // console.log(storage);
 });
+
+
+// blog
+document.getElementById('btn-blog').addEventListener('click', function () {
+  window.location.href = 'blog.html';
+})
