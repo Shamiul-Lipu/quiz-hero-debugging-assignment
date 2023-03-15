@@ -58,10 +58,10 @@ const displayQuiz = (data) => {
     return;
   }
 
-  console.log(data);
+  // console.log(data);
 
   data.forEach((quiz, i) => {
-    console.log(quiz, i);
+    // console.log(quiz, i);
     quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
@@ -112,7 +112,7 @@ document.querySelector("#submit").addEventListener("click", function () {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("result"));
+  let storage = JSON.parse(localStorage.getItem("results"));
   if (storage) {
     localStorage.setItem(
       "results",
@@ -140,7 +140,9 @@ document.querySelector("#submit").addEventListener("click", function () {
 
   // Right side bar/ answer section
   let x = setTimeout(() => {
-    showAnswers(answers);
+    displayResult.innerHTML = '';
+    // showAnswers(answers);
+    // console.log(showAnswers, answers);
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
@@ -185,4 +187,5 @@ document.querySelector("#submit").addEventListener("click", function () {
     clearTimeout(x);
   }, 1500);
   window.scrollTo(0, 0);
+  console.log(storage);
 });
