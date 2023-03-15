@@ -46,11 +46,21 @@
             <div class="">
                 <h3 class="text-xl font-bold py-3">
                     <!-- Question  -->
-                    1. Diffrence between map, foreach, filter, find
+                    1. Difference between map, foreach, filter, find
                 </h3>
                 <p>
                     <!-- answer -->
-
+                    <span class="font-semibold">.map()</span>, executes the same code on every element in an array and
+                    returns a new array with the updated elements.
+                    <br>
+                    <span class="font-semibold">.forEach()</span>, is used to execute the same code on every element in
+                    an array but does not change the array and it returns undefined.
+                    <br>
+                    <span class="font-semibold">.filter()</span>, checks every element in an array to see if it meets a
+                    certain condition and returns a new array with the elements that return truthy for the condition.
+                    <br>
+                    <span class="font-semibold">.find()</span>, returns only one match in an array. If in an array is
+                    more than one result, the function will return the first that has matched.
                 </p>
             </div>
             <!-- Second Question -->
@@ -61,7 +71,19 @@
                 </h3>
                 <p>
                     <!-- answer -->
-
+                    <span class="font-semibold">Local Storage</span> allows amounts of data to be stored with no
+                    expiration date.
+                    but the data is not deleted when the browser is closed. Local storage is useful for storing data
+                    that the user will need to access later, such as offline data.
+                    <br>
+                    <span class="font-semibold">Session Storage</span> is session-based and works per window or tab.
+                    This means that data is stored only for the duration of a session until the browser (or tab) is
+                    closed.
+                    <br>
+                    <span class="font-semibold">Cookiese</span> store small amounts of data that has to be sent
+                    back to the server with subsequent requests and their expiration can be set from either server or
+                    client. They are primarily used for server-side reading.Cookies expire based on the setting and
+                    working per tab and window. Cookies can Data transfer to the server.
                 </p>
             </div>
             <!-- Third Question -->
@@ -72,7 +94,27 @@
                 </h3>
                 <p>
                     <!-- answer -->
-
+                    JavaScript is a single-threaded programming language. This means that JavaScript can do only one
+                    thing at a single point in time but javaScript has a runtime model based on an event loop, which is
+                    responsible for executing the code, collecting and processing events, and executing queued
+                    sub-tasks.The event loop is the secret behind JavaScript's asynchronous programming. JS executes all
+                    operations on a single thread, but using a few smart data structures, it gives us the illusion of
+                    multi-threading.
+                    <br>
+                    The Event Loop — has to monitor the Call Stack and the Callback Queue. If the Call
+                    Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call
+                    Stack, which effectively runs it.The call stack is responsible for keeping track of all the
+                    operations in line to be executed.
+                    Whenever a function is finished, it is popped from the stack.The event queue is responsible for
+                    sending new functions to the stack for processing. It follows the
+                    queue data structure to maintain the correct sequence in which all operations should be sent for
+                    execution.Whenever an async function is called, it is sent to a browser API. These are APIs built
+                    into the browser. Based on the command received from the call stack, the API starts its own
+                    single-threaded operation. The language itself is single-threaded, but the browser APIs act as
+                    separate threads.
+                    The event loop facilitates this process; it constantly checks whether or not the call stack is
+                    empty. If it is empty, new functions are added from the event queue. If it is not, then the current
+                    function call is processed.
                 </p>
             </div>
         </section>
@@ -86,7 +128,12 @@
                 </h3>
                 <p>
                     <!-- answer -->
-
+                    quizTimer function handle timer of the whole quiz. quizeTimer using conditional rendaring and
+                    initially its value sets true and call the
+                    clearInterval() which is because of quizTimer initial value sets as dismiss is ture. The quizeTimer
+                    first called from eventListener startQuiz and called value as undefined so the quizeTimer's starts
+                    the setInterval and count the time until the quizeTimer called again sets it's value to true(dismiss
+                    true and clearInterval call to stop the timer) from eventListener submit .
                 </p>
             </div>
             <div class="">
@@ -96,7 +143,12 @@
                 </h3>
                 <p>
                     <!-- answer -->
-
+                    chooseQuiz created dynamically from displayQuizOptions for the porpuse of select or choose the
+                    options for the displayed quiz. dynamically it takes the index and given answer from the
+                    user and checks the answers from the global variable answers array using find method. then using
+                    condition on existing id and quiz data it either splice or push the quiz data to the answers array.
+                    And
+                    finally calles displayAnswers(answers) to display the given answered from the user.
                 </p>
             </div>
         </section>
