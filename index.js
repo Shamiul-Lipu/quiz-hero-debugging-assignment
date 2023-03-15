@@ -9,7 +9,7 @@ let startQuiz = document.querySelector("#startQuiz");
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
-let quizContainer = document.querySelector(".quizContainer");
+let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
@@ -67,7 +67,7 @@ const displayQuiz = (data) => {
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
       ${i + 1}
     </div>
-    <p class="text-gray-800 text-sm">${quiz.quetion}</p>
+    <p class="text-gray-800 text-sm">${quiz.question}</p>
   </div>
   <div class="grid grid-cols-2 gap-4 mt-5">
     ${displayQuizOptions(quiz.options, i)}
@@ -141,7 +141,7 @@ document.querySelector("#submit").addEventListener("click", function () {
   // Right side bar/ answer section
   let x = setTimeout(() => {
     displayResult.innerHTML = '';
-    // showAnswers(answers);
+    showAnswers(answers);
     // console.log(showAnswers, answers);
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
